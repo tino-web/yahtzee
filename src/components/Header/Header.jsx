@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import VolumeControl from '../VolumeControl/VolumeControl';
 
 function Header() {
@@ -24,15 +24,15 @@ function Header() {
           </button>
           <div className='collapse navbar-collapse' id='navbarNav'>
             <ul className='navbar-nav mr-auto'>
-              <li className='nav-item active'>
-                <Link to='/' className='nav-link'>
+              <li className='nav-item'>
+                <NavLink exact to='/' className='nav-link' activeClassName='active'>
                   Play Yahtzee
-                </Link>
+                </NavLink>
               </li>
               <li className='nav-item'>
-                <Link to='/highscores' className='nav-link'>
+                <NavLink to='/highscores' className='nav-link' activeClassName='active'>
                   High Scores
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
