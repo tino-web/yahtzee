@@ -4,6 +4,7 @@ import Header from '../Header/Header';
 import Game from '../Game/Game';
 import Footer from '../Footer/Footer';
 import './App.css';
+import LeaderBoard from '../LeaderBoard/LeaderBoard';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
           <div className='container pt-3 d-block pb-3'>
             <Switch>
               <Route exact path='/'><Game /></Route>
-              <Route path='/highscores'>High scores placeholder</Route>
+              <Route path='/highscores'><LeaderBoard /></Route>
             </Switch>
           </div>
           <Footer />
