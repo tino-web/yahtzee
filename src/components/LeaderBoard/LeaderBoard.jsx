@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import useHighScores from '../../hooks/useHighScores';
 
 function LeaderBoard() {
-  const [highScores, setHighScores] = useHighScores();
+  const [fieldScore, setFieldScore] = useState('');
+  const [name, setName] = useState('');
+  const { submitHighScores, clearHighScores } = useHighScores();
 
-  function onChange(event) {
-    setHighScores(event.target.value);
+  function handleScoreChange(event) {
+    setFieldScore(event.target.value);
   }
+
+  function handleNameChange(event) {
+    setName(event.target.value);
+  }
+
   return (
     <>
       <h1>Leaderboard</h1>
-      <input value={highScores} type='text' onChange={onChange} />
-      {highScores}
+      <input value={fieldScore} type='number' onChange={handleScoreChange} />
+      <input value={name} type='text' onChange={handleNameChange} />
+      <button type='button' onClick={() => submitHighScores(fieldScore, name)}>Submit</button>
+      <button type='button' onClick={() => clearHighScores()}>Clear</button>
     </>
   );
 }

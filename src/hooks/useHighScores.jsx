@@ -1,15 +1,35 @@
 import { useState, useEffect } from 'react';
 
 function useHighScores() {
-  const [highScores, setHighScores] = useState(
-    localStorage.getItem('myHighScores') || '',
-  );
+  const [highScores, setHighScores] = useState(JSON.parse(localStorage.getItem('myHighScores')) || []);
+
+  function submitHighScores(score, name) {
+    setHighScores((prevScores) => {
+      const maxId = prevScores.reduce((id, item) => Math.max(id, item.scoreId), 0);
+      return [
+        ...prevScores,
+        {
+          scoreId: maxId + 1,
+          name,
+          score: Number(score),
+        },
+      ];
+    });
+  }
+
+  function clearHighScores() {
+    setHighScores([]);
+  }
 
   useEffect(() => {
-    localStorage.setItem('myHighScores', highScores);
+    localStorage.setItem('myHighScores', JSON.stringify(highScores));
   }, [highScores]);
 
-  return ([highScores, setHighScores]);
+  return ({
+    highScores,
+    submitHighScores,
+    clearHighScores,
+  });
 }
 
 export default useHighScores;
