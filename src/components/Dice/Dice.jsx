@@ -10,7 +10,7 @@ function Dice({ isLocked, diceId, value }) {
     diceValues,
   } = useContext(Context);
 
-  const [isRolling, setIsRolling] = useState(false);
+  const [isRolling, setIsRolling] = useState('');
 
   // eslint-disable-next-line global-require, import/no-dynamic-require
   const diceImg = require(`../../assets/images/dices/${value}.svg`);
@@ -29,7 +29,8 @@ function Dice({ isLocked, diceId, value }) {
       <button
         type='button'
         disabled={(!roundStarted || roundEnded)}
-        className={`btn dice p-0 ${!isLocked && isRolling} ${isLocked && 'locked'}`}
+        className={`btn dice p-0 ${!isLocked ? isRolling : ''} ${isLocked ? 'locked' : ''}`}
+        id={diceId}
         onClick={() => lockToggle(diceId)}
       >
         <img
