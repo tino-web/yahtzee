@@ -22,14 +22,14 @@ function ScoreCard() {
           <td>
             <strong>BONUS score</strong>
           </td>
-          <td>{sectionScores.bonus}</td>
+          <td>{sectionScores.bonus || 0}</td>
         </tr>
         <tr>
           <td />
           <td>
             <strong>TOTAL upper section</strong>
           </td>
-          <td>{sectionScores.upper}</td>
+          <td>{sectionScores.upper || 0}</td>
         </tr>
 
         <tr>
@@ -42,14 +42,14 @@ function ScoreCard() {
           <td>
             <strong>TOTAL lower section</strong>
           </td>
-          <td>{sectionScores.lower}</td>
+          <td>{sectionScores.lower || 0}</td>
         </tr>
         <tr>
           <td />
           <td>
             <strong>GRAND TOTAL</strong>
           </td>
-          <td>{sectionScores.total}</td>
+          <td>{sectionScores.total || 0}</td>
         </tr>
       </tbody>
     </table>

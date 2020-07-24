@@ -17,7 +17,12 @@ function ContextProvider({ children }) {
 
   const [diceValues, setDiceValues] = useState([0, 0, 0, 0, 0]);
   const [lockedDices, setLockedDices] = useState([false, false, false, false, false]);
-  const [sectionScores, setSectionScores] = useState({});
+  const [sectionScores, setSectionScores] = useState({
+    upper: 0,
+    bonus: 0,
+    lower: 0,
+    total: 0,
+  });
 
   const [scores, setScores] = useState(defaultScores);
   const [volume, setVolume] = useState(0.2);
@@ -102,7 +107,7 @@ function ContextProvider({ children }) {
   }, [scores]);
 
   useEffect(() => {
-    if (roundsLeft < 0) {
+    if (roundsLeft === 0) {
       setGameEnded(true);
     }
   }, [roundsLeft]);
