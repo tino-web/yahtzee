@@ -3,6 +3,7 @@ import { Context } from '../../context/gameContext';
 import RollButton from '../RollButton/RollButton';
 import GameStats from '../GameStats/GameStats';
 import Splasher from '../Splasher/Splasher';
+import GameEnder from '../GameEnder/GameEnder';
 
 function GameControls() {
   const {
@@ -13,17 +14,16 @@ function GameControls() {
   } = useContext(Context);
 
   function displaySwitch() {
-    if (yahtzeeRolled) {
-      const imgUrl = 'https://media.giphy.com/media/cqw80XStn460U/giphy.gif';
-      const title = 'You finished your game of...';
-      const mark = 'YAHTZEE!';
-      return <Splasher imgUrl={imgUrl} title={title} mark={mark} />;
-    }
     if (gameEnded) {
-      const imgUrl = 'https://media.giphy.com/media/26tOZ42Mg6pbTUPHW/giphy.gif';
-      const title = 'You rolled a...';
-      const mark = 'YAHTZEE!';
-      return <Splasher imgUrl={imgUrl} title={title} mark={mark} />;
+      return <GameEnder />;
+    }
+    if (yahtzeeRolled) {
+      const splasherData = {
+        imgUrl: 'https://media.giphy.com/media/cqw80XStn460U/giphy.gif',
+        title: 'You rolled a...',
+        subtitle: 'YAHTZEE!',
+      };
+      return <Splasher splasherData={splasherData} />;
     }
     return <RollButton />;
   }

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 function useHighScores() {
   const [highScores, setHighScores] = useState(JSON.parse(localStorage.getItem('myHighScores')) || []);
 
-  function submitHighScores(score, name) {
+  function submitHighScores(name, score) {
     setHighScores((prevScores) => {
       const maxId = prevScores.reduce((id, item) => Math.max(id, item.scoreId), 0);
       return [

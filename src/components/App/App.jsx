@@ -12,7 +12,7 @@ function App() {
       <BrowserRouter>
         <div className='container-fluid d-flex flex-column p-0 min-vh-100'>
           <Header />
-          <div className='container pt-3 d-block pb-3'>
+          <div className='container py-3 px-0 d-block'>
             <Switch>
               <Route exact path='/'><Game /></Route>
               <Route path='/highscores'><LeaderBoard /></Route>

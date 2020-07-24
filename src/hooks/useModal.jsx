@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-function useModal() {
-  const [isShowing, setIsShowing] = useState(false);
+function useModal(defaultShow = false) {
+  const [isShowing, setIsShowing] = useState(defaultShow);
 
   function toggleShow() {
     setIsShowing((prevValue) => !prevValue);

@@ -107,7 +107,7 @@ function ContextProvider({ children }) {
   }, [scores]);
 
   useEffect(() => {
-    if (roundsLeft < 0) {
+    if (roundsLeft === 0) {
       setGameEnded(true);
     }
   }, [roundsLeft]);

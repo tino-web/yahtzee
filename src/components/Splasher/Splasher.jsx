@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Splasher({ imgUrl, title, mark }) {
+function Splasher({ splasherData: { imgUrl, title, subtitle } }) {
   return (
     <div className='mx-3 rounded splasher' style={{ backgroundImage: `url(${imgUrl})` }}>
       <div className='text-white'>
         {title}
-        <h2>{mark}</h2>
+        <h2>{subtitle}</h2>
       </div>
     </div>
   );
@@ -15,7 +15,9 @@ function Splasher({ imgUrl, title, mark }) {
 export default Splasher;
 
 Splasher.propTypes = {
-  imgUrl: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  mark: PropTypes.string.isRequired,
+  splasherData: PropTypes.shape({
+    imgUrl: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    subtitle: PropTypes.string.isRequired,
+  }).isRequired,
 };

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 
-function Modal({ children, title, isShowing, toggleShow, onSubmit }) {
+function Modal({ children, title, isShowing, toggleShow, onSubmit, onSubmitText }) {
   const ModalWindow = (
     <>
       <div className='modal-backdrop' onClick={toggleShow} role='presentation' />
@@ -18,7 +18,7 @@ function Modal({ children, title, isShowing, toggleShow, onSubmit }) {
             {children}
           </div>
           <div className='modal-footer'>
-            <button type='button' className='btn btn-primary' onClick={onSubmit}>Save changes</button>
+            <button type='button' className='btn btn-primary' onClick={onSubmit}>{onSubmitText}</button>
             <button type='button' className='btn btn-secondary' onClick={toggleShow}>Close</button>
           </div>
         </div>
@@ -36,11 +36,15 @@ function Modal({ children, title, isShowing, toggleShow, onSubmit }) {
 export default Modal;
 
 Modal.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node.isRequired,
   title: PropTypes.string.isRequired,
   isShowing: PropTypes.bool.isRequired,
   toggleShow: PropTypes.func.isRequired,
   onSubmit: PropTypes.func,
+  onSubmitText: PropTypes.string,
 };
 
-Modal.defaultProps = { onSubmit: () => {} };
+Modal.defaultProps = {
+  onSubmit: () => {},
+  onSubmitText: 'Save Changes',
+};
