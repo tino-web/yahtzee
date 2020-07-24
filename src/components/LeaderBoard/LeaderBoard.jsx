@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import useHighScores from '../../hooks/useHighScores';
+import Modal from '../Modal/Modal';
+import useModal from '../../hooks/useModal';
 
 function LeaderBoard() {
   const [fieldScore, setFieldScore] = useState('');
@@ -21,8 +23,14 @@ function LeaderBoard() {
     </tr>
   ));
 
+  const { isShowing, toggleShow } = useModal();
+
   return (
     <>
+      <button onClick={toggleShow} type='button'>Show Modal</button>
+      <Modal isShowing={isShowing} toggleShow={toggleShow} title='Submit score'>
+        Hello there my love
+      </Modal>
       <h1>Leaderboard</h1>
       <table className='table'>
         <thead>
