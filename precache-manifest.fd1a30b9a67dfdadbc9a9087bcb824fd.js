@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3660b2cb0b0f89129ec57ea25a453078",
+    "revision": "bc30ae3ca8c9f7af62522d02c29cfc89",
     "url": "/yahtzee/index.html"
   },
   {
-    "revision": "c739184eac8f311ea6df",
+    "revision": "e2bbc38e10936a5f4e47",
     "url": "/yahtzee/static/css/main.6da95702.chunk.css"
   },
   {
-    "revision": "d09f5f7e1cd161c6d35b",
-    "url": "/yahtzee/static/js/2.37e54e9b.chunk.js"
+    "revision": "f86f9028d92a817414df",
+    "url": "/yahtzee/static/js/2.595e05d5.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/yahtzee/static/js/2.37e54e9b.chunk.js.LICENSE.txt"
+    "url": "/yahtzee/static/js/2.595e05d5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c739184eac8f311ea6df",
-    "url": "/yahtzee/static/js/main.cecf6795.chunk.js"
+    "revision": "e2bbc38e10936a5f4e47",
+    "url": "/yahtzee/static/js/main.16c680bc.chunk.js"
   },
   {
     "revision": "808cd194974b8ec71ab0",
