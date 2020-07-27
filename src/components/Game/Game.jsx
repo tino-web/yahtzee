@@ -8,7 +8,7 @@ function Game() {
       <div className='col-12 mb-md-0 mb-3 col-md-6'>
         <Table />
       </div>
-      <div className='col-12 col-md-6'>
+      <div className='col-12 col-md-6 px-4 px-0-md'>
         <ScoreCard />
       </div>
     </main>
