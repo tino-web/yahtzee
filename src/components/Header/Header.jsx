@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import VolumeControl from '../VolumeControl/VolumeControl';
 
 function Header() {
@@ -7,9 +7,9 @@ function Header() {
     <header className='px-0 d-block'>
       <nav className='navbar navbar-expand-md navbar-light bg-light'>
         <div className='container'>
-          <a className='navbar-brand' href='localhost:3000'>
+          <Link exact to='/' className='navbar-brand'>
             YAHTZEE!
-          </a>
+          </Link>
           <VolumeControl />
           <button
             className='navbar-toggler order-md-2'
