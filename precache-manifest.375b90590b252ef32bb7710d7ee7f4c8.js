@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "997b3426b8bb7bab5c554399a27f5db1",
+    "revision": "3660b2cb0b0f89129ec57ea25a453078",
     "url": "/yahtzee/index.html"
   },
   {
-    "revision": "67427acbec6eff33c943",
-    "url": "/yahtzee/static/css/main.f2c3f1f4.chunk.css"
+    "revision": "c739184eac8f311ea6df",
+    "url": "/yahtzee/static/css/main.6da95702.chunk.css"
   },
   {
-    "revision": "e3704a11583f401c589f",
-    "url": "/yahtzee/static/js/2.fc15ccf0.chunk.js"
+    "revision": "d09f5f7e1cd161c6d35b",
+    "url": "/yahtzee/static/js/2.37e54e9b.chunk.js"
   },
   {
-    "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/yahtzee/static/js/2.fc15ccf0.chunk.js.LICENSE.txt"
+    "revision": "c64c486544348f10a6d6c716950bc223",
+    "url": "/yahtzee/static/js/2.37e54e9b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "67427acbec6eff33c943",
-    "url": "/yahtzee/static/js/main.c401d818.chunk.js"
+    "revision": "c739184eac8f311ea6df",
+    "url": "/yahtzee/static/js/main.cecf6795.chunk.js"
   },
   {
     "revision": "808cd194974b8ec71ab0",
