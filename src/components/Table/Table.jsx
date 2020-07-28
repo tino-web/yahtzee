@@ -30,5 +30,3 @@ function Table() {
 }
 
 export default Table;
-
-// Table background: https://hipwallpaper.com/view/R6QI5k

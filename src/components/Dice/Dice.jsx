@@ -50,5 +50,3 @@ Dice.propTypes = {
   diceId: PropTypes.number.isRequired,
   value: PropTypes.number.isRequired,
 };
-
-// Credit to: https://game-icons.net/1x1/delapouite/dice-six-faces-one.html
