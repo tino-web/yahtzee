@@ -10,7 +10,7 @@ function Footer() {
         <a
           href='https://github.com/tino-web/yahtzee'
           target='_blank'
-          rel='noreferrer'
+          rel='noreferrer noopener'
         >
           GitHub
         </a>

@@ -153,13 +153,13 @@ function ContextProvider({ children }) {
       return countObject[Number(id)] * Number(id);
 
     case 'threeofakind':
-      if (valueArray[0] === 3 || valueArray[1] === 3 || valueArray[2] === 3) {
+      if (valueArray[0] >= 3 || valueArray[1] >= 3 || valueArray[2] >= 3) {
         return sumDices;
       }
       break;
 
     case 'fourofakind':
-      if (valueArray[0] === 4 || valueArray[1] === 4) {
+      if (valueArray[0] >= 4 || valueArray[1] >= 4) {
         return sumDices;
       }
       break;
