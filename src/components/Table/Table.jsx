@@ -17,7 +17,7 @@ function Table() {
 
   return (
     <div className='row' style={{ backgroundImage: `url(${tablebg})` }}>
-      <div className='col p-4'>
+      <div className='col p-4 p-md-2'>
         <div className='row no-gutters'>
           {diceComponents}
         </div>

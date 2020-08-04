@@ -4,7 +4,7 @@ import ScoreCard from '../ScoreCard/ScoreCard';
 
 function Game() {
   return (
-    <main role='main' className='row'>
+    <main role='main' className='row' style={{ marginRight: '0px', marginLeft: '0px' }}>
       <div className='col-12 mb-md-0 mb-3 col-md-6'>
         <Table />
       </div>
